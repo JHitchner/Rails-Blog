@@ -1,0 +1,8 @@
+<p>All Users </p>
+<% @user.each do |user| %>
+<li>
+  <%= user.username %>
+  <%= link_to "View Account", user_path(user.id) %>
+  <%= link_to "Delete Account", users_path,  method: :delete %>
+</li>
+<% end %>

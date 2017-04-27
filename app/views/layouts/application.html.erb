@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SoapBox</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<nav>
+    <%= link_to "Home" %>
+  <% if logged_in %>
+    <%= link_to "LogOut", logout_path, method: :delete  %>
+    <%= link_to "Account" %>
+  <% else %>
+    <%= link_to "SignUp" %>
+    <%= link_to "LogIn" %>
+  <% end %>
+</nav>
+<body>
+  <% if flash[:notice] %>
+    <%= flash[:notice] %>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <%= flash[:alert] %>
+  <% end %>
+
+
+
+
+<%= yield %>
+
+</body>
+</html>
+
+<!-- I can create/delete user /create/edit/delete post  create comment-->
+<!--Left to do: SignIn/SignOut Delete/Edit Comment Session Info and Flash Notices  -->

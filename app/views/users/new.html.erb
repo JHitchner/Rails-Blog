@@ -1,0 +1,16 @@
+
+<%= form_for :user, url: users_path do |user| %>
+  <p>
+    <%= user.label :username %><br>
+    <%= user.text_field :username %>
+  </p>
+
+  <p>
+    <%= user.label :password %><br>
+    <%= user.text_field :password%>
+  </p>
+
+  <p>
+    <%= user.submit %>
+  </p>
+<% end %>
