@@ -7,13 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <nav>
-    <%= link_to "Home" %>
+    <a href="/users">Home</a>
   <% if logged_in %>
     <%= link_to "LogOut", logout_path, method: :delete  %>
-    <%= link_to "Account" %>
+    <%= link_to "Create Post", new_post_path %>
   <% else %>
-    <%= link_to "SignUp" %>
-    <%= link_to "LogIn" %>
+    <%= link_to "SignUp", new_user_path %>
+    <%= link_to "LogIn", login_path %>
   <% end %>
 </nav>
 <body>
@@ -24,9 +24,6 @@
   <% if flash[:alert] %>
     <%= flash[:alert] %>
   <% end %>
-
-
-
 
 <%= yield %>
 

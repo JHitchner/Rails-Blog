@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     if @user.password == params[:session][:password]
       session[:user_id]=@user.id
       log_in @user
+      puts "my sess = #{session[:user_id]}"
       redirect_to @user
     else
       flash[:alert] = "Invalid Username/Password. Please try again"

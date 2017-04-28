@@ -6,11 +6,25 @@
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
-
 <p>
   <strong>Text:</strong>
   <%= @post.content %>
 </p>
+
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.content %>
+  </p>
+  <% if session[:user_id] == @post.user_id %>
+  <%= link_to 'Edit Comment', edit_post_comment_path(@post, comment) %>
+  <% end %>
+<% end %>
 
 <h2>Add a comment:</h2>
 <%= form_for([@post, @post.comments.build]) do |form| %>
@@ -26,5 +40,9 @@
     <%= form.submit %>
   </p>
 <% end %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
+
 <%= link_to 'Back', posts_path %>
+
+<% if session[:user_id] == @post.user_id %>
+  <%= link_to 'Edit', edit_post_path(@post) %>
+<% end %>
