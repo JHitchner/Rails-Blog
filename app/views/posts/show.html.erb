@@ -1,7 +1,4 @@
 
-<%= link_to "User Account", user_path %>
-<%= link_to "Delete Post", post_path %>
-
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -43,6 +40,9 @@
 
 <%= link_to 'Back', posts_path %>
 
+
 <% if session[:user_id] == @post.user_id %>
   <%= link_to 'Edit', edit_post_path(@post) %>
+  <%= link_to "Delete Post", post_path %>
+  <%= link_to "Your Account", user_path(session[:user_id]) %>
 <% end %>

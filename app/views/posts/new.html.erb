@@ -1,13 +1,14 @@
-
-<%= form_for :post, url: posts_path do |post| %>
-  <p> Speak Your Mind</p>
-  <p>
-    <%= post.text_field :title, :placeholder => "Title" %>
-  </p>
-  <p>
-    <%= post.text_area :content, :placeholder => "Body" %>
-  </p>
-  <p>
-    <%= post.submit %>
-  </p>
-<% end %>
+<div class="posteditform">
+  <%= form_for :post, url: posts_path do |post| %>
+    <p id="haters"> Salt Thy Haters</p>
+    <p>
+      <%= post.text_field :title, :placeholder => "Title", :class=> "postTitle" %>
+    </p>
+    <p>
+      <%= post.text_area :content, :placeholder => "Body", :class=> "postBody" %>
+    </p>
+    <p>
+      <%= post.submit "Post", :class => "postSubmit"  %>
+    </p>
+  <% end %>
+  </div>

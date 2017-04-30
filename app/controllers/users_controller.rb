@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def index
     @user = User.all
-    # @current_user = User.find_by_id(session[:user_id])
   end
 
   def new
@@ -14,7 +13,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    # @user = User.new(params[:user])
     @user = User.new(user_params)
 
     if @user.save

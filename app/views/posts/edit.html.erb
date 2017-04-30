@@ -1,17 +1,16 @@
-<h1>Editing Post</h1>
-
+<h1>Edit</h1>
+ <div class="posteditform">
 <%= form_for :post, url: post_path(@post), method: :patch do |post| %>
   <p>
-    <%= post.label :title %><br>
-    <%= post.text_field :title %>
+    <%= post.text_field :title, :placeholder => "Title", :class=> "postTitle" %>
   </p>
   <p>
-    <%= post.label :content %><br>
-    <%= post.text_area :content %>
+    <%= post.text_area :content, :placeholder => "Body", :class=> "postBody"  %>
   </p>
   <p>
-    <%= post.submit %>
+    <%= post.submit "Save Post", :class => "postSubmit" %>
   </p>
 <% end %>
+</div>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back to Account',user_path(session[:user_id]), :id => "backUser" %>

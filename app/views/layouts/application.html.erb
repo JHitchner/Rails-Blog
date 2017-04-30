@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>SoapBox</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<nav>
-    <a href="/users">Home</a>
-  <% if logged_in %>
-    <%= link_to "LogOut", logout_path, method: :delete  %>
-    <%= link_to "Create Post", new_post_path %>
-  <% else %>
-    <%= link_to "SignUp", new_user_path %>
-    <%= link_to "LogIn", login_path %>
-  <% end %>
-</nav>
-<body>
-  <% if flash[:notice] %>
-    <%= flash[:notice] %>
-  <% end %>
+  <html>
+    <head>
+      <title>Salty</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+      <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto:500" rel="stylesheet"
+    </head>
+    <a id="home" href="/">Home</a>
+    <% if logged_in %>
+        <%= link_to "Log Out", logout_path,  method: :delete , :class => "logout" %>
+        <%= link_to "Your Account", user_path(session[:user_id]), :class => "account" %>
+    <% else %>
+        <%= link_to "SignUp", new_user_path , :class => "signup" %>
+        <%= link_to "LogIn", login_path , :class => "login"%>
+    <% end %>
+    <nav>
+      <%=image_tag("shaker.png", :id => "shakey") %>
+      <%=image_tag("fallingsalt.png", :id => "falling") %>
+      <p id="nav_header">Salty</p>
+    </nav>
+    <body>
+      <% if flash[:notice] %>
+        <%= flash[:notice] %>
+      <% end %>
+      <% if flash[:alert] %>
+        <%= flash[:alert] %>
+      <% end %>
 
-  <% if flash[:alert] %>
-    <%= flash[:alert] %>
-  <% end %>
+      <%= yield %>
 
-<%= yield %>
+    </body>
+  </html>
 
-</body>
-</html>
-
-<!-- I can create/delete user /create/edit/delete post  create comment-->
-<!--Left to do: SignIn/SignOut Delete/Edit Comment Session Info and Flash Notices  -->
+  <!-- I can create/delete user /create/edit/delete post / edit/create comment define sessions-->
+  <!--Need to hide delete from non-user/ Need to delete comment/ Add flash notice for all successes/style make homepage  -->

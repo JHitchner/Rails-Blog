@@ -1,3 +1,69 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Post Edit Page
+.posteditform{
+  background-color: #DDDEFA;
+  position: relative;
+  height: 450px;
+  width: 500px;
+  left: 650px;
+  top: 300px;
+  border-radius: 10px;
+  border: 3px solid #576490;
+}
+.postTitle{
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #576490;
+  top: 10px;
+  width: 300px;
+  left: 80px;
+  color: #576490;
+  font-family: 'Roboto', sans-serif;
+}
+.postBody{
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #576490;
+  top: 5px;
+  width: 300px;
+  height: 200px;
+  left: 80px;
+  color: #576490;
+  font-family: 'Roboto', sans-serif;
+}
+.postSubmit{
+  position: relative;
+  top: 20px;
+  left: 120px;
+  border-radius: 10px;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  background-color: #7796CB;
+  border: 2px solid #7796CB;
+  color: #E6E6ED;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+#backUser{
+  position: relative;
+  top: 150px;
+  left: 850px;
+}
+// Post Create Page
+#haters{
+  position: absolute;
+  top: -150px;
+  font-size: 30px;
+  width: 600px;
+  font-family: 'Gloria Hallelujah', cursive;
+  letter-spacing: 20px;
+}

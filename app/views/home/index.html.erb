@@ -1,0 +1,15 @@
+
+<h3 id="home_phrase">Let Fly the Fury of Your Words</h3>
+<p id="homeCategories"> Read Salty Angst </p>
+<div id="homeContainer">
+<% @user.each do |user| %>
+  <% @post.each do |post| %>
+      <p id="home_post">
+        <%= link_to post.title, post_path(post), :id => "view_post" %>
+        <%= link_to post.user.username, user_path(user.id), :id => "view_user" %>
+      </p>
+      <hr id="home_hr">
+  <% end %>
+<% end %>
+</div>
+<%=image_tag("salty_land.png", :class => "saltyL") %>

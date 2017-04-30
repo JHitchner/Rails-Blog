@@ -1,9 +1,28 @@
-<h1><%=@user.username %>'s Account</h1>
+<div id="accountbackground"></div>
 
-
-My Posts
+<div id="accountInfo">
+  <h1 id="userAccount">
+    <%=@user.username %>'s Salt Box
+  </h1>
+</div>
 
 <% @post.each do |p| %>
-<%= p.title %>
-<%= p.content %>
+  <div id="accountPost">
+    <p id="ptitle">
+      <%= p.title %>
+      <% if session[:user_id] == @user.id %>
+        <%= link_to 'Edit Post', edit_post_path(p), :id => "editPost" %>
+      <% end %>
+    </p>
+    <p id="pcontent">
+      <%= p.content%>
+    </p>
+  </div>
 <% end %>
+
+<% puts "current sess = #{session[:user_id]}" %>
+<% if session[:user_id] == @user.id %>
+  <%= link_to "Create Post", new_post_path,:id => "createPost" %>
+  <%= link_to "Delete Account", users_path, :id => "deleteAccount", method: :delete %>
+<% end %>
+<%=image_tag("Salt.png", :class => "shaker") %>

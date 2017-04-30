@@ -8,7 +8,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    
+    session[:user_id] = @post.user_id
+
   end
 
   def new
@@ -21,9 +22,8 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to user_path(session[:user_id])
     else
       render 'edit'
     end
