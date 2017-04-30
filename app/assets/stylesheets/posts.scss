@@ -53,7 +53,7 @@
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
 }
-#backUser{
+.backUser{
   position: relative;
   top: 150px;
   left: 850px;
@@ -66,4 +66,174 @@
   width: 600px;
   font-family: 'Gloria Hallelujah', cursive;
   letter-spacing: 20px;
+}
+#postContainer{
+  position: relative;
+  left: 350px;
+  top: 200px;
+  height: 1200px;
+  width: 1100px;
+  background-color: #576490;
+}
+.commentTitle{
+  position: absolute;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #576490;
+  top: 270px;
+  width: 300px;
+  left: 405px;
+  color: #576490;
+  font-family: 'Roboto', sans-serif;
+}
+.commentBody{
+  position: absolute;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #576490;
+  top: 300px;
+  width: 300px;
+  height: 100px;
+  left: 405px;
+  color: #576490;
+  font-family: 'Roboto', sans-serif;
+}
+.commentSubmit{
+  position: absolute;
+  top: 450px;
+  left: 480px;
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  background-color: #7796CB;
+  border: 2px solid #576490;
+  color: #E6E6ED;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+#addComment{
+  position: absolute;
+  left: 410px;
+  top: 230px;
+  font-family: 'Roboto', sans-serif;
+  color: #E6E6ED;
+}
+#thepostTitle{
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #576490;
+  background-color: #7796CB;
+  top: 50px;
+  width: 300px;
+  left: 400px;
+  color: #E6E6ED;
+  font-family: 'Roboto', sans-serif;
+}
+#thepostContent{
+  position: relative;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: left;
+  border: 2px solid #576490;
+  background-color: #7796CB;
+  top: 50px;
+  width: 300px;
+  height: 400px;
+  word-wrap: 250px;
+  left: 400px;
+  color: #E6E6ED;
+  font-family: 'Roboto', sans-serif;
+}
+#comments{
+  position: relative;
+  left: 100px;
+  top: -280px;
+  font-family: 'Roboto', sans-serif;
+  color: #E6E6ED;
+}
+#userCommentsTitle{
+  position: relative;
+  left: 100px;
+  top: -280px;
+  font-family: 'Roboto', sans-serif;
+  color: #E6E6ED;
+}
+#userCommentsBody{
+  position: relative;
+  left: 100px;
+  top: -280px;
+  font-family: 'Roboto', sans-serif;
+  color: #E6E6ED;
+}
+.editComment{
+  position: relative;
+  left: 100px;
+  top: -300px;
+  font-family: 'Roboto', sans-serif;
+  color: #E6E6ED;
+}
+// Edit Comment Page
+#commenteditContainer{
+  background-color: #DDDEFA;
+  position: relative;
+  height: 450px;
+  width: 500px;
+  left: 650px;
+  top: 250px;
+  border-radius: 10px;
+  border: 3px solid #576490;
+}
+.editcommentTitle{
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #576490;
+  top: 50px;
+  width: 300px;
+  left: 80px;
+  color: #576490;
+  font-family: 'Roboto', sans-serif;
+}
+.editcommentBody{
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #576490;
+  top: 50px;
+  width: 300px;
+  height: 200px;
+  left: 80px;
+  color: #576490;
+  font-family: 'Roboto', sans-serif;
+}
+.editcommentSubmit{
+  position: relative;
+  top: 100px;
+  left: 120px;
+  border-radius: 10px;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  background-color: #7796CB;
+  border: 2px solid #7796CB;
+  color: #E6E6ED;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+.deletecomment{
+  position: relative;
+  left: 790px;
+  top: 120px;
+  margin: 5px;
+  font-family: 'Roboto', sans-serif;
+  color: #7796CB;
 }

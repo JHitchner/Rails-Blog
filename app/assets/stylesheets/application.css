@@ -96,6 +96,22 @@
    font-size: 20px;
    font-family: 'Roboto', sans-serif;
  }
+ .account{
+   position: fixed;
+   top: 60px;
+   width: 150px;
+   height: 30px;
+   padding: 10px;
+   left: 1600px;
+   z-index: 3;
+   cursor:pointer;
+   color: #C9CAD9;
+   text-decoration: none;
+   text-align: center;
+   margin: 0px;
+   font-size: 20px;
+   font-family: 'Roboto', sans-serif;
+ }
  .signup{
    position: fixed;
    top: 60px;
@@ -117,5 +133,5 @@
    height: 100%;
    width: 100%;
    overflow-x: hidden;
-   overflow-y: scroll;
+   overflow-y: hidden;
  }

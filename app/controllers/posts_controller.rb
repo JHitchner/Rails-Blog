@@ -9,7 +9,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     session[:user_id] = @post.user_id
-
   end
 
   def new
@@ -30,16 +29,13 @@ class PostsController < ApplicationController
   end
 
   def create
-
     @post = Post.new(post_params)
     @post.user_id = session[:user_id]
-
-  # @post = Post.new(params[:post])
     if @post.save
-     redirect_to @post
-   else
+     redirect_to user_path(session[:user_id])
+    else
      render 'new'
-   end
+    end
   end
 
   def destroy
@@ -47,9 +43,9 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path
   end
+
   private
   def post_params
     params.require(:post).permit(:title, :content, :user_id)
   end
-
 end

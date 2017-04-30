@@ -1,48 +1,44 @@
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-<p>
-  <strong>Text:</strong>
-  <%= @post.content %>
-</p>
-
-<h2>Comments</h2>
-<% @post.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
+<div id="postContainer">
+  <p id="thepostTitle">
+    <%= @post.title %>
   </p>
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.content %>
+  <p id="thepostContent">
+    <%= @post.content %>
   </p>
-  <% if session[:user_id] == @post.user_id %>
-  <%= link_to 'Edit Comment', edit_post_comment_path(@post, comment) %>
+  <h3 id="comments">
+    Comments
+  </h3>
+  <% @post.comments.each do |comment| %>
+    <p id="userCommentsTitle">
+      <strong>Title:</strong>
+      <%= comment.commenter %>
+    </p>
+    <p <p id="userCommentsBody">
+      <strong>Comment:</strong>
+      <%= comment.content %>
+    </p>
+    <% if session[:user_id] == @post.user_id %>
+      <%= link_to 'Edit Comment', edit_post_comment_path(@post, comment), :class => "editComment" %>
+    <% end %>
   <% end %>
-<% end %>
+  <h3 id="addComment">
+    Add a comment:
+  </h3>
+  <%= form_for([@post, @post.comments.build]) do |form| %>
+    <p>
+      <%= form.text_field :commenter, :placeholder => "Title",:class=> "commentTitle" %>
+    </p>
+    <p>
+      <%= form.text_area :content, :placeholder => "Body",:class=> "commentBody"  %>
+    </p>
+    <p>
+      <%= form.submit "Save Comment", :class => "commentSubmit" %>
+    </p>
+  <% end %>
 
-<h2>Add a comment:</h2>
-<%= form_for([@post, @post.comments.build]) do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :content %><br>
-    <%= form.text_area :content %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', posts_path %>
-
-
-<% if session[:user_id] == @post.user_id %>
-  <%= link_to 'Edit', edit_post_path(@post) %>
-  <%= link_to "Delete Post", post_path %>
-  <%= link_to "Your Account", user_path(session[:user_id]) %>
-<% end %>
+  <% if session[:user_id] == @post.user_id %>
+    <%= link_to 'Edit', edit_post_path(@post) %>
+    <%= link_to "Delete Post", post_path %>
+    <%= link_to 'Back to Account',user_path(session[:user_id]), :class => "backUser" %>
+  <% end %>
+</div>
