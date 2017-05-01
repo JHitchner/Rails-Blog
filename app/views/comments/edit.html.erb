@@ -10,5 +10,7 @@
 
 
 <%= link_to 'Back', user_path(session[:user_id]), :class => "deletecomment"%>
-<%= link_to 'Delete Comment',[@comment.post, @comment], method: :delete,
+<% if logged_in && session[:user_id] == post.comment.user_id %>
+  <%= link_to 'Delete Comment',[@comment.post, @comment], method: :delete,
   data: { confirm: 'You are about to delete your comment. Continue?' }, :class => "deletecomment"%>
+<% end %>
