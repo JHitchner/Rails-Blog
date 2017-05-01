@@ -5,22 +5,24 @@
     <%=@user.username %>'s Salt Box
   </h1>
 </div>
-
-<% @post.each do |p| %>
+<!--For each post made by user display post title and content  -->
+<% @post.each do |post| %>
   <div id="accountPost">
     <p id="ptitle">
-      <%= p.title %>
-      <% if session[:user_id] == @user.id %>
-        <%= link_to 'Edit Post', edit_post_path(p), :id => "editPost" %>
-      <% end %>
+      <%= post.title %>
     </p>
     <p id="pcontent">
-      <%= p.content%>
+      <%= post.content%>
     </p>
+<!--If current session is equal to the User Account Id -display the following options . Display
+this option for each post -->
+    <% if session[:user_id] == @user.id %>
+      <%= link_to 'Edit Post', edit_post_path(post), :id => "editPost" %>
+    <% end %>
   </div>
 <% end %>
 
-<% puts "current sess = #{session[:user_id]}" %>
+<!--If current session is equal to the User Account Id -display the following options  -->
 <% if session[:user_id] == @user.id %>
   <%= link_to "Create Post", new_post_path,:id => "createPost" %>
   <%= link_to "Delete Account", users_path, :id => "deleteAccount", method: :delete %>

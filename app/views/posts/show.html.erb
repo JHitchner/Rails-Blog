@@ -12,9 +12,7 @@
     <p id="userCommentsTitle">
       <%= comment.commenter %>
     </p>
-    <% if session[:user_id] == @post.user_id %>
         <%= link_to 'Edit Comment', edit_post_comment_path(@post, comment), :class => "editComment" %>
-    <% end %>
   <% end %>
   <h3 id="addComment">
     Add a comment:
@@ -31,6 +29,6 @@
   <% if session[:user_id] == @post.user_id %>
     <%= link_to "Delete Post", post_path, method: :delete,
     data: { confirm: 'You are about to delete your post. Continue?' }, :class => "deletepost" %>
-    <%= link_to 'Back to Account',user_path(session[:user_id]), :class => "backUser" %>
+    <%= link_to 'Back to Account',user_path(current_user), :class => "backUser" %>
   <% end %>
 </div>
