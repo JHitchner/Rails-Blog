@@ -1,16 +1,10 @@
 <%= form_for([@post, @comment]) do |form| %>
   <div id="commenteditContainer">
-      <%= form.text_field :commenter, :placeholder => "User", :class=> "editcommentTitle"  %>
-      <%= form.text_area :content, :placeholder => "Body", :class=> "editcommentBody"  %>
-    <p>
+      <%= form.text_area :commenter, :placeholder => "User", :class=> "editcommentTitle"  %>
       <%= form.submit "Save Comment", :class => "editcommentSubmit"%>
-    </p>
   </div>
 <% end %>
 
-
-<%= link_to 'Back', user_path(session[:user_id]), :class => "deletecomment"%>
-<% if logged_in && session[:user_id] == post.comment.user_id %>
-  <%= link_to 'Delete Comment',[@comment.post, @comment], method: :delete,
-  data: { confirm: 'You are about to delete your comment. Continue?' }, :class => "deletecomment"%>
-<% end %>
+<%= link_to 'Back', post_path(@post.id), :class => "backUser" %>
+<%= link_to 'Delete Comment',[@comment.post, @comment], method: :delete,
+data: { confirm: 'You are about to delete your comment. Continue?' }, :class => "deletecomment"%>

@@ -13,5 +13,6 @@
 <% end %>
 </div>
 
-<%= link_to 'Back to Account',user_path(session[:user_id]), :class => "backUser" %>
-<%= link_to "Delete Post", post_path, :id => "deletepost" %>
+<%= link_to 'Back to Account',user_path(session[:user_id]), :class => "backUserEdit" %>
+<%= link_to "Delete Post", post_path,  method: :delete,
+data: { confirm: 'You are about to delete your post. Continue?' }, :class => "deletepostEdit" %>

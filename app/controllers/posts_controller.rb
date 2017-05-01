@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    session[:user_id] = @post.user_id
+    # session[:user_id] = @post.user_id
   end
 
   def new

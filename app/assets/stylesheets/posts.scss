@@ -53,17 +53,27 @@
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
 }
-.backUser{
+.backUserEdit{
   position: relative;
-  top: 150px;
-  left: 900px;
+  top: 250px;
+  left: 780px;
 }
-#deletepost{
+.deletepostEdit{
   position: absolute;
-  left: 800px;
-  top: 687px;
+  left: 950px;
+  top: 785px;
 }
 // Post Create Page
+.backUser{
+  position: relative;
+  top: -215px;
+  left: 580px;
+}
+.deletepost{
+  position: absolute;
+  left: 460px;
+  top: 407px;
+}
 #haters{
   position: absolute;
   top: -150px;
@@ -108,7 +118,7 @@
 .commentSubmit{
   position: absolute;
   top: 450px;
-  left: 480px;
+  left: 490px;
   border-radius: 10px;
   height: 50px;
   width: 150px;
@@ -158,29 +168,26 @@
 }
 #comments{
   position: relative;
-  left: 100px;
+  left: 80px;
   top: -280px;
   font-family: 'Roboto', sans-serif;
+  font-size: 25px;
   color: #E6E6ED;
 }
 #userCommentsTitle{
   position: relative;
-  left: 100px;
+  background-color: #E6E6ED;
+  left: 80px;
   top: -280px;
+  width: 250px;
+  border-radius: 5px;
+  padding: 5px;
   font-family: 'Roboto', sans-serif;
-  color: #E6E6ED;
-}
-#userCommentsBody{
-  position: relative;
-  left: 100px;
-  top: -280px;
-  font-family: 'Roboto', sans-serif;
-  color: #E6E6ED;
 }
 .editComment{
   position: relative;
-  left: 100px;
-  top: -300px;
+  left: 80px;
+  top: -290px;
   font-family: 'Roboto', sans-serif;
   color: #E6E6ED;
 }
