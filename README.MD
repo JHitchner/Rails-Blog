@@ -10,9 +10,9 @@ HTML5, CSS, Ruby, RoR, ActiveRecord, SQLite3, 37 Coffees
 <hr>
 <strong>Resources used to complete this project:</strong>
 
-  http://guides.rubyonrails.org/getting_started.html
-  https://www.railstutorial.org/book/basic_login
-  Numerous StackOverflow Questions
+ <li> http://guides.rubyonrails.org/getting_started.html </li>
+ <li> https://www.railstutorial.org/book/basic_login</li>
+  <li>Numerous StackOverflow Questions</li>
   
 <hr>
 <strong>What This Project Does:</strong>
