@@ -36,7 +36,7 @@ through routes. I do feel I have a better understanding now after completing thi
 project.
 
 <hr>
-<strong>Whatto Add:</strong>
+<strong>What to Add:</strong>
 
   I plan to add a user profile to this project, fix the log_in issue, improve
 the UX/UI, and add user identifier to the posts on the home page.
