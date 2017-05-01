@@ -1,9 +1,9 @@
 
-<strong>My First Rails Blog for the Salty at Heart</strong>
+<h1> My First Rails Blog for the Salty at Heart</h1>
 
 
 <hr>
-#What Was Used to Build This Project:
+What Was Used to Build This Project:
 
 HTML5, CSS, Ruby, RoR, ActiveRecord, SQLite3, 37 Coffees
 
